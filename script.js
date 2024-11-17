@@ -111,6 +111,15 @@ function dragElement(elmnt) {
     elmnt.onmousedown = dragMouseDown;
   }
 
+  //time
+  function updateTime() {
+    var currentTime = new Date().toLocaleString();
+    var timeText = document.querySelector("#timeElement");
+    timeText.innerHTML = currentTime;
+  }
+  setInterval(updateTime, 1000);
+
+
   function getAge() {
     const currentDate = new Date();
     const targetDate = new Date("2004-09-28"); // Replace with your target date in the format "YYYY-MM-DD"

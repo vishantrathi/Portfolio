@@ -8,20 +8,15 @@
   <title>Vishant's OS</title>
   <link rel="icon" href="images\photo2.jpeg" type="image/x-icon">
   <link href="style.css" rel="stylesheet" type="text/css" />
-  <style>
-    #map {
-      height: 400px;
-    }
-  </style>
-
 </head>
 
 <body
   style="height: 100vh; width: 100vw; display: flex; align-items: center; justify-content: center; font-family: Helvetica, Arial, sans-serif; margin: 0; background-image: url('images/wallpaper3.jpg'); background-size: cover; background-position: center;">
+
   <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden;">
     <video id="videoElement" autoplay muted loop
-      style="position: absolute; top: 0; opacity: 0.5; left: 0; display: none; width: 100%; filter: brightness(100%) blur(4px) contrast(90%); height: 100%; z-index: -1; object-fit: cover;">
-      <source src="https://cloud-5si8ado6s-hack-club-bot.vercel.app/0capybara_showering_like_a_boss_-_luxury_shower.mp4"
+      style="position: absolute; top: 0; opacity: 0; left: 0; display: none; width: 100%; filter: brightness(100%) blur(4px) contrast(90%); height: 100%; z-index: -1; object-fit: cover;">
+      <source src="video/video1.mp4"
         type="video/mp4">
     </video>
   </div>
@@ -36,7 +31,10 @@
         Play Music
       </p>
 
-      <p id="time" style="margin-right: 16px; margin-left: 16px">Time</p>
+      <p id="timeElement"
+      style="margin-right: 16px; background-color: rgba(256, 256, 256, 0.125); padding: 4px 12px; border-radius: 16px;">
+      Time
+  </p>
     </div>
 
   </div>
@@ -64,10 +62,11 @@
     <div id="mapsIcon" onclick="openIcon('maps')"
       style="cursor: pointer; align-items: center; border-radius: 8px; width: fit-content; padding: 8px; display: flex; flex-direction: column;">
       <img style="height: 64px; width: 64px;  border-radius: 16px; margin: 0px"
-        src="https://cloud-2jokm3zza-hack-club-bot.vercel.app/0frameokay.png" />
-      <p style="margin: 0px; font-size: 12px; margin-top: 4px; font-weight: 500; color: #fff">Maps</p>
+        src="images/notes icon.jpeg" />
+      <p style="margin: 0px; font-size: 12px; margin-top: 4px; font-weight: 500; color: #fff">Resume</p>
     </div>
   </div>
+
   <!-- #start template -->
   <div id="projects" onclick="tapWindow(document.getElementById('projects'))"
     style="align-items: center; border: 1px solid black; border-radius: 16px; background-color: #fff; width: 500px; position: absolute; justify-content: center; flex-direction: column; display: none">
@@ -92,7 +91,7 @@
       <div onclick="closeElement(document.getElementById('maps'))"
         style="cursor: pointer; height: 16px; width: 16px; background-color: red; border-radius: 16px; margin-left: 16px">
       </div>
-      <p>Maps</p>
+      <p>My Resume</p>
       <div style="height: 16px; width: 16px; border-radius: 16px; margin-right: 16px"></div>
 
 
@@ -109,7 +108,7 @@
 
       // Add the tile layer
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/#map=4/21.82/71.81">OpenStreetMap</a> contributors'
+        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/relation/2763541#map=12/28.5635/77.1528">OpenStreetMap</a> contributors'
       }).addTo(map);
 
       // Add a marker
@@ -119,7 +118,7 @@
           className: 'custom-marker-icon',
           html: '<div style="position: relative;">' +
             '<img style="height: 24px; width: 24px; border: 2px solid red; position: relative; border-radius: 16px; object-fit: cover;left: -4px; z-index: 1" src="' + imageURL + '" class="marker-image-bottom">' +
-            // '<img style="height: 48px; width: 48px; position: relative; bottom: 0; right: 16px;" src="https://cloud-jdx6xxsfn-hack-club-bot.vercel.app/0droppoint.png" class="marker-image">' +
+            '<img style="height: 48px; width: 48px; position: relative; bottom: 0; right: 16px;" src="https://cloud-jdx6xxsfn-hack-club-bot.vercel.app/0droppoint.png" class="marker-image">' +
             '</div>'
         });
 
