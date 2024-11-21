@@ -2,6 +2,13 @@ html {
     height: 100%;
     width: 100%;
   }
+
+  body background-image {
+    background-image: url('images/wallpaper3.jpg'); 
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center;
+  }
   
   
   .thomas_message {
@@ -21,8 +28,6 @@ html {
     border-radius: 16px;
     margin-left: auto;
   }
-  
-  
   
   
   a {

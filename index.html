@@ -11,7 +11,7 @@
 </head>
 
 <body
-  style="height: 100vh; width: 100vw; display: flex; align-items: center; justify-content: center; font-family: Helvetica, Arial, sans-serif; margin: 0; background-image: url('images/wallpaper3.jpg'); background-size: cover; background-position: center;">
+  style="height: 100vh; width: 100vw; display: flex; align-items: center; justify-content: center; font-family: Helvetica, Arial, sans-serif; margin: 0; background-position: center;background-image: url(images/wallpaper3.jpg);">
 
   <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden;">
     <video id="videoElement" autoplay muted loop
@@ -24,8 +24,7 @@
         type="video/mp4">
     </video>
   </div>
-  <div style="position: absolute; width: 100%; top: 0; display: flex; justify-content: space-between; z-index: 2000; align-items: center; background-color: #00000030; color: #fff
-    ; margin: 0; pointer-events: none;">
+  <div style="position: absolute; width: 100%; top: 0; display: flex; justify-content: space-between; z-index: 2000; align-items: center; background-color: #00000030; color: #fff; margin: 0; pointer-events: none;">
     <p style="margin-left: 16px; font-weight: 600;">Vishant's OS</p>
     <div style="display: flex; flex-direction: row; align-items: center;">
       <p onclick="toggleMusic()"
@@ -63,7 +62,7 @@
         src="https://cloud-jq9w3zppp-hack-club-bot.vercel.app/0greatercontrast.png" />
       <p style="margin: 0px; font-size: 12px; margin-top: 4px; font-weight: 500; color: #fff">Projects</p>
     </div>
-    <div id="mapsIcon" onclick="openIcon('maps')"
+    <div id="ResumeIcon" onclick="openIcon('Resume')"
       style="cursor: pointer; align-items: center; border-radius: 8px; width: fit-content; padding: 8px; display: flex; flex-direction: column;">
       <img style="height: 64px; width: 64px;  border-radius: 16px; margin: 0px"
         src="images/notes icon.jpeg" />
@@ -107,45 +106,45 @@
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 
     <script>
-      // Initialize the map
-      var map = L.map('map').fitWorld().zoomIn(1);
+      // // Initialize the map
+      // var map = L.map('map').fitWorld().zoomIn(1);
 
-      // Add the tile layer
-      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/relation/2763541#map=12/28.5635/77.1528">OpenStreetMap</a> contributors'
-      }).addTo(map);
+      // // Add the tile layer
+      // L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      //   attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/relation/2763541#map=12/28.5635/77.1528">OpenStreetMap</a> contributors'
+      // }).addTo(map);
 
-      // Add a marker
-      function createCustomMarker(latitude, longitude, imageURL, caption) {
-        // Create a custom DivIcon
-        var customIcon = L.divIcon({
-          className: 'custom-marker-icon',
-          html: '<div style="position: relative;">' +
-            '<img style="height: 24px; width: 24px; border: 2px solid red; position: relative; border-radius: 16px; object-fit: cover;left: -4px; z-index: 1" src="' + imageURL + '" class="marker-image-bottom">' +
-            '<img style="height: 48px; width: 48px; position: relative; bottom: 0; right: 16px;" src="https://cloud-jdx6xxsfn-hack-club-bot.vercel.app/0droppoint.png" class="marker-image">' +
-            '</div>'
-        });
+      // // Add a marker
+      // function createCustomMarker(latitude, longitude, imageURL, caption) {
+      //   // Create a custom DivIcon
+      //   var customIcon = L.divIcon({
+      //     className: 'custom-marker-icon',
+      //     html: '<div style="position: relative;">' +
+      //       '<img style="height: 24px; width: 24px; border: 2px solid red; position: relative; border-radius: 16px; object-fit: cover;left: -4px; z-index: 1" src="' + imageURL + '" class="marker-image-bottom">' +
+      //       '<img style="height: 48px; width: 48px; position: relative; bottom: 0; right: 16px;" src="https://cloud-jdx6xxsfn-hack-club-bot.vercel.app/0droppoint.png" class="marker-image">' +
+      //       '</div>'
+      //   });
 
-        // Create a marker with the custom icon
-        var marker = L.marker([latitude, longitude], {icon: customIcon});
+      //   // Create a marker with the custom icon
+      //   var marker = L.marker([latitude, longitude], {icon: customIcon});
 
         // Create a custom popup
-        var popupContent = '<div style="text-align: center;">' +
-          '<img style="max-height: 126px; border-radius: 16px; object-fit: cover;" src="' + imageURL + '">' +
-          `<p style="margin: 2px 0; text-align: left;">${caption}</p>` +
-          '</div>';
+      //   var popupContent = '<div style="text-align: center;">' +
+      //     '<img style="max-height: 126px; border-radius: 16px; object-fit: cover;" src="' + imageURL + '">' +
+      //     `<p style="margin: 2px 0; text-align: left;">${caption}</p>` +
+      //     '</div>';
 
-        // Bind the popup to the marker
-        marker.bindPopup(popupContent);
+      //   // Bind the popup to the marker
+      //   marker.bindPopup(popupContent);
 
-        marker.addTo(map);
+      //   marker.addTo(map);
 
-      }
-      createCustomMarker(34.9482, -81.9301, 'https://cloud-gelhtq1fq-hack-club-bot.vercel.app/0screenshot_2023-06-12_at_4.15.00_pm.png', 'Dieter, Parker, Tyler, and I organized Carolina Hacks, the first student-led Hackathon for high schoolers in South Carolina. We had a blast! <br/><br/>Checkout our <a href="https://drive.google.com/file/d/1gOpYcsQk7mf2ETHbtHarUdKUDJAMFL-w/view?usp=drive_link">Carolina Hacks Documentary</a>');
-      createCustomMarker(28.4595, 77.0266, 'https://cloud-6i5n6oo28-hack-club-bot.vercel.app/0screenshot_2023-06-13_at_10.33.44_am.png', 'Epoch was awesome! I met so many awesome people (including my team mates: Arpan and Vaishnavi). We built an AI-powered pickup line generator. <br/><br/>Epoch Documentary <a href="https://youtu.be/KLx4NZZPzMc">Epoch Documentary</a>');
-      createCustomMarker(42.3601, -71.0589, 'https://cloud-eakdz9j3y-hack-club-bot.vercel.app/0image.png', 'I really enjoyed Angel Hacks. At Angel Hacks, we built an AI college admissions simulator, funded by Elon Musk. It is free, but students give 10 % of lifetime income.It also costs the user $250, 000 for every student they accept <br/> <br/>Checkout the <a href="https://youtu.be/KLx4NZZPzMc"> Angel Hacks Documentary</a> ');
+      // }
+      // createCustomMarker(34.9482, -81.9301, 'https://cloud-gelhtq1fq-hack-club-bot.vercel.app/0screenshot_2023-06-12_at_4.15.00_pm.png', 'Dieter, Parker, Tyler, and I organized Carolina Hacks, the first student-led Hackathon for high schoolers in South Carolina. We had a blast! <br/><br/>Checkout our <a href="https://drive.google.com/file/d/1gOpYcsQk7mf2ETHbtHarUdKUDJAMFL-w/view?usp=drive_link">Carolina Hacks Documentary</a>');
+      // createCustomMarker(28.4595, 77.0266, 'https://cloud-6i5n6oo28-hack-club-bot.vercel.app/0screenshot_2023-06-13_at_10.33.44_am.png', 'Epoch was awesome! I met so many awesome people (including my team mates: Arpan and Vaishnavi). We built an AI-powered pickup line generator. <br/><br/>Epoch Documentary <a href="https://youtu.be/KLx4NZZPzMc">Epoch Documentary</a>');
+      // createCustomMarker(42.3601, -71.0589, 'https://cloud-eakdz9j3y-hack-club-bot.vercel.app/0image.png', 'I really enjoyed Angel Hacks. At Angel Hacks, we built an AI college admissions simulator, funded by Elon Musk. It is free, but students give 10 % of lifetime income.It also costs the user $250, 000 for every student they accept <br/> <br/>Checkout the <a href="https://youtu.be/KLx4NZZPzMc"> Angel Hacks Documentary</a> ');
 
-      marker.addTo(map);
+      // marker.addTo(map);
     </script>
   </div>
 
@@ -444,16 +443,13 @@
           style="width: 120px; border-radius: 16px" />
         </br>
         </br>
-        <h1>Vishant Rathi</h1>
+        <h1><i>Vishant Rathi</i></h1>
         <p>
-            <b>
               I am an organized and creative undergraduate 
-with excellent communication, problem-solving, 
-and leadership skills. I am passionate about 
-exploring opportunities in Computer Science 
-Engineering while efficiently developing
-quality projects 
-        </b>
+              with excellent communication, problem-solving, 
+              and leadership skills. I am passionate about 
+              exploring opportunities in Computer Science 
+              Engineering while efficiently developing projects 
     </div>
     </div>
   </div>
