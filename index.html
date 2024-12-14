@@ -1,0 +1,441 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Vishant's OS</title>
+  <link rel="icon" href="images\photo2.jpeg" type="image/x-icon">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body
+  style="height: 100vh; width: 100vw; display: flex; align-items: center; justify-content: center; font-family: Helvetica, Arial, sans-serif; margin: 0; background-position: center;background-image: url(images/wallpaper3.jpg);">
+
+  <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden;">
+    <video id="videoElement" autoplay muted loop
+<<<<<<< HEAD
+      style="position: absolute; top: 0; opacity: 0; left: 0; display: none; width: 100%; filter: brightness(100%) blur(4px) contrast(90%); height: 100%; z-index: -1; object-fit: cover;">
+=======
+      style="position: absolute; top: 0; opacity: 0.5; left: 0; display: none; width: 100%; filter: brightness(100%) blur(4px) contrast(90%); height: 100%; z-index: -1; object-fit: cover;">
+>>>>>>> 975e114 (change background video)
+      <source src="video/video1.mp4"
+        type="video/mp4">
+    </video>
+  </div>
+  <div style="position: absolute; width: 100%; top: 0; display: flex; justify-content: space-between; z-index: 2000; align-items: center; background-color: #00000030; color: #fff; margin: 0; pointer-events: none;">
+    <p style="margin-left: 16px; font-weight: 600;">Vishant's OS</p>
+    <div style="display: flex; flex-direction: row; align-items: center;">
+      <p onclick="toggleMusic()"
+        style="pointer-events: auto; cursor: pointer; padding: 4px 12px; background-color: rgba(255, 255, 255, 0.1); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.0); border: 1px solid transparent; transition: box-shadow 0.3s ease; border-radius: 16px"
+        id="musicToggle" onmouseover="this.style.boxShadow = 'inset 0 0 0 1px rgba(255, 255, 255, 0.5)'"
+        onmouseout="this.style.boxShadow = 'none'">
+        Play Music
+      </p>
+
+      <p id="timeElement"
+      style="margin-right: 16px; background-color: rgba(256, 256, 256, 0.125); padding: 4px 12px; border-radius: 16px;">
+      Time
+  </p>
+    </div>
+
+  </div>
+  <div id="winowApplications"
+    style="height: calc(100% - 128px); width: 100%; z-index: 1; display: flex; padding: 16px; flex-direction: column;">
+    <div id="contactIcon" onclick="openIcon('contact')"
+      style="cursor: pointer; align-items: center; border-radius: 8px; width: fit-content; padding: 8px; display: flex; flex-direction: column;">
+      <img style="height: 64px; width: 64px;  border-radius: 16px; margin: 0px"
+        src="https://cloud-4y56og6dg-hack-club-bot.vercel.app/0purplecontact.png" />
+      <p style="margin: 0px; font-size: 12px; margin-top: 4px; font-weight: 500; color: #fff">Contact</p>
+    </div>
+    <div id="aboutMeIcon" onclick="openIcon('aboutMe')"
+      style="cursor: pointer; align-items: center; border-radius: 8px; width: fit-content; padding: 8px; display: flex; flex-direction: column;">
+      <img style="height: 64px; width: 64px;  border-radius: 16px; margin: 0px"
+        src="https://cloud-adbpuuwa9-hack-club-bot.vercel.app/0appicon2.png" />
+      <p style="margin: 0px; font-size: 12px; margin-top: 4px; font-weight: 500; color: #fff">aboutMe.txt</p>
+    </div>
+
+    <div id="projectsIcon" onclick="openIcon('projects')"
+      style="cursor: pointer; align-items: center; border-radius: 8px; width: fit-content; padding: 8px; display: flex; flex-direction: column;">
+      <img style="height: 64px; width: 64px;  border-radius: 16px; margin: 0px"
+        src="https://cloud-jq9w3zppp-hack-club-bot.vercel.app/0greatercontrast.png" />
+      <p style="margin: 0px; font-size: 12px; margin-top: 4px; font-weight: 500; color: #fff">Projects</p>
+    </div>
+    <div id="ResumeIcon" onclick="openIcon('Resume')"
+      style="cursor: pointer; align-items: center; border-radius: 8px; width: fit-content; padding: 8px; display: flex; flex-direction: column;">
+      <img style="height: 64px; width: 64px;  border-radius: 16px; margin: 0px"
+        src="images/notes icon.jpeg" />
+      <p style="margin: 0px; font-size: 12px; margin-top: 4px; font-weight: 500; color: #fff">Resume</p>
+    </div>
+  </div>
+
+  <!-- #start template -->
+  <div id="projects" onclick="tapWindow(document.getElementById('projects'))"
+    style="align-items: center; border: 1px solid black; border-radius: 16px; background-color: #fff; width: 500px; position: absolute; justify-content: center; flex-direction: column; display: none">
+    <div id="projectshandle"
+      style="display: flex; align-items: center; background-color: #F6F6F6; border-radius: 16px 16px 0px 0px; justify-content: space-between; width: 100%">
+      <div onclick="closeElement(document.getElementById('projects'))"
+        style="cursor: pointer; height: 16px; width: 16px; background-color: red; border-radius: 16px; margin-left: 16px">
+      </div>
+      <p>My Projects</p>
+      <div style="height: 16px; width: 16px; border-radius: 16px; margin-right: 16px"></div>
+    </div>
+    <div style="width: calc(100% - 32px);">
+      <p>Content</p>
+    </div>
+  </div> 
+  <!-- stop template -->
+
+  <div id="maps" onclick="tapWindow(document.getElementById('maps'))"
+    style="align-items: center; border: 1px solid black; border-radius: 16px; background-color: #fff; overflow: hidden; width: 750px; position: absolute; justify-content: center; flex-direction: column; display: none">
+    <div id="mapshandle"
+      style="display: flex; align-items: center; background-color: #F6F6F6; border-radius: 16px 16px 0px 0px; justify-content: space-between; width: 100%">
+      <div onclick="closeElement(document.getElementById('maps'))"
+        style="cursor: pointer; height: 16px; width: 16px; background-color: red; border-radius: 16px; margin-left: 16px">
+      </div>
+      <p>My Resume</p>
+      <div style="height: 16px; width: 16px; border-radius: 16px; margin-right: 16px"></div>
+
+
+    </div>
+    <div style="width: 100%; height: 400px;">
+      <div id="map"></div>
+
+    </div>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  </div>
+
+  
+  
+  <div id="contact" onclick="tapWindow(document.getElementById('contact'))"
+    style="align-items: center; border: 1px solid black; border-radius: 16px; background-color: #fff; width: 500px; position: absolute; justify-content: center; flex-direction: column; display: none">
+    <div id="contacthandle"
+      style="display: flex; align-items: center; background-color: #F6F6F6; border-radius: 16px 16px 0px 0px; justify-content: space-between; width: 100%">
+      <div onclick="closeElement(document.getElementById('contact'))"
+        style="cursor: pointer; height: 16px; width: 16px; background-color: red; border-radius: 16px; margin-left: 16px">
+      </div>
+      <p>Message Vishant</p>
+      <div style="height: 16px; width: 16px; border-radius: 16px; margin-right: 16px"></div>
+    </div>
+    <div style="width: calc(100% - 32px);">
+      <div id="chat">
+        <p class="thomas_message">
+          Hey there, welcome to
+          my inbox.</p>
+        <img src="images\photo1.jpg"
+          style="width: 120px; border-radius: 16px" />
+        <p class="thomas_message">You can send texts here & they'll ping on my phone instantly</p>
+        <p class="thomas_message">Feel free to also send me an email at <a href="mailto: vishantrathigurjar@gmail.com"
+            style="color: #CE41FF">vishantrathigurjar@gmail.com</a> (for any professional purposes)
+        </p>
+      </div>
+
+      <div
+        style="flex-direction: row; align-items: center; margin-bottom: 16px; justify-content: space-between; display: flex;">
+        <input type="text" id="messageInput" onchange="awaitingResponse = false"
+          style="padding: 6px 10px; width: calc(100%); border: 1px solid #ccc; border-radius: 4px; font-size: 14px; outline: none; vertical-align: middle;" />
+        <div
+          style="display: flex; align-items: center; justify-content: center; font-size: 14px; margin-left: 16px; outline: none;">
+          <p style="margin: 0; cursor: pointer; color: #CE41FF" onclick="sendMessage()">Send</p>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="projects" onclick="tapWindow(document.getElementById('projects'))"
+    style="align-items: center; border: 1px solid black; border-radius: 16px; background-color: #fff; width: 512px; position: absolute; justify-content: center; flex-direction: column; display: none">
+    <div id="projectshandle"
+      style="display: flex; align-items: center; background-color: #F6F6F6; border-radius: 16px 16px 0px 0px; justify-content: space-between; width: 100%">
+      <div onclick="closeElement(document.getElementById('projects'))"
+        style="cursor: pointer; height: 16px; width: 16px; background-color: red; border-radius: 16px; margin-left: 16px">
+      </div>
+      <p>Projects</p>
+      <div style="height: 16px; width: 16px; border-radius: 16px; margin-right: 16px"></div>
+    </div>
+
+    <div id="icon-container"
+      style="display: grid; max-height: 600px; padding-left: 16px; padding-right: 16px; padding-top: 16px; padding-bottom: 16px; overflow-y: scroll; grid-template-columns: repeat(1, 1fr); gap: 0px;">
+
+      <script>
+        // Your array of objects
+        const icons = [
+          {
+            id: "mealPackIcon",
+            imgSrc: "https://cloud-r2bo1086a-hack-club-bot.vercel.app/0mealpack.png",
+            title: "Meal Pack",
+            description: "This is a project I built for my mom. It's a tool for creating, storing, and sharing recipes.",
+            links: [
+              {
+                title: "Video Demo",
+                url: "https://youtu.be/g29MwYE3F7g"
+              },
+              {
+                title: "Project URL",
+                url: "https://mealpack.app/"
+              }
+            ]
+          },
+          {
+            id: "givingGiraffeMeIcon",
+            imgSrc: "https://cloud-n8xlb3i7m-hack-club-bot.vercel.app/0givinggiraffee.png",
+            title: "Giving Giraffe",
+            description: "Created at a hackathon with friends. It's a fun tool that lets users customize 3D flower bouquets and send them to friends.",
+            links: [
+              {
+                title: "Video Demo",
+                url: "https://youtu.be/SJQgZk3LrXk"
+              },
+              {
+                title: "Project URL",
+                url: "giving-giraffe.vercel.app"
+              },
+              {
+                title: "DevPost Listing",
+                url: "https://devpost.com/software/giving-giraffe"
+              }
+            ]
+          },
+          {
+            id: "coconutIcon",
+            imgSrc: "https://cloud-cvuf7zw5n-hack-club-bot.vercel.app/0coconuticon.png",
+            title: "Coconut",
+            description: "Built this at Epoch with some colleagues. It's an AI-powered tool for generating personalized pickup lines.",
+            links: [
+              {
+                title: "Project URL",
+                url: "https://coconut-eight.vercel.app/"
+              },
+              {
+                title: "GitHub Repo",
+                url: "https://github.com/SerenityUX/coconut"
+              }
+            ]
+          },
+          {
+            id: "dormanIcon",
+            imgSrc: "https://cloud-86lg561zb-hack-club-bot.vercel.app/0dormanhackclub.png",
+            title: "Dorman Hack Club",
+            description: "Started with a friend as the only programming club at our school. We host various workshops, and the club is still active after our graduation.",
+            links: []
+          },
+          {
+            id: "auroraIcon",
+            imgSrc: "https://cloud-m8uitkxlz-hack-club-bot.vercel.app/0aurora.png",
+            title: "Aurora",
+            description: "A weather SMS tool I worked on with Matt. It sends daily weather updates and even suggests what to wear.",
+            links: [
+              {
+                title: "Project URL",
+                url: "https://www.auroraalert.cc/"
+              }
+            ]
+          },
+          {
+            id: "penguinPairIcon",
+            imgSrc: "https://cloud-7k5mnxpyi-hack-club-bot.vercel.app/0screenshot_2023-06-09_at_12.48.15_pm.png",
+            title: "Penguin Pair",
+            description: "This is a game created over a weekend with my friend Dieter. Check it out, it's fun and currently available only on iOS.",
+            links: [
+              {
+                title: "App Store Download",
+                url: "https://apps.apple.com/us/app/penguin-pair-cards/id6446442403"
+              }
+            ]
+          },
+          {
+            id: "telegradeIcon",
+            imgSrc: "https://cloud-dytdcke80-hack-club-bot.vercel.app/0screenshot_2023-06-09_at_12.54.25_pm.png",
+            title: "Telegrade",
+            description: "An app built with Dieter aimed at helping small businesses grow their social media presence.",
+            links: [
+              {
+                title: "App Store Download",
+                url: "https://apps.apple.com/us/app/telegrade/id1667140470"
+              }
+            ]
+          },
+          {
+            id: "serenidadIcon",
+            imgSrc: "https://cloud-1rd9210b7-hack-club-bot.vercel.app/0image.png",
+            title: "Serenidad Podcast",
+            description: "This is a bit of a secret project, but feel free to check it out. It already has over 80 episodes.",
+            links: [
+              {
+                title: "Spotify Link",
+                url: "https://open.spotify.com/show/7LW5340gHWfr7nbH0PehTL"
+              }
+            ]
+          },
+          {
+            id: "bikeIcon",
+            imgSrc: "https://cloud-7vio1pyee-hack-club-bot.vercel.app/0bikeapp.png",
+            title: "Bike App UI",
+            description: "I built the UI for a fictional bike shop as part of the Google UX Design Specialization.",
+            links: [
+              {
+                title: "Figma Prototype",
+                url: "https://www.figma.com/proto/2JjWx4iCsGnos1JUI4gW3c/Proper-Bike-App?page-id=0%3A1&type=design&node-id=24-347&viewport=-68%2C-486%2C0.21&scaling=scale-down&starting-point-node-id=24%3A347&show-proto-sidebar=1"
+              }
+            ]
+          },
+          {
+            id: "wireUsIcon",
+            imgSrc: "https://cloud-1f5hszzzt-hack-club-bot.vercel.app/0wireus.png",
+            title: "WireUs",
+            description: "My first introduction to software design. I helped with the UI design for this coding challenge platform in collaboration with Pooja Gera (the creator of the project).",
+            links: [
+              {
+                title: "Figma File",
+                url: "https://www.figma.com/file/nPgIxuGC3bGYo5uvIKlCot/Untitled-(Copy)?type=design&node-id=0%3A1&t=yw2Qjv0iMpbEc0FK-1"
+              },
+              {
+                title: "WireUs Twitter",
+                url: "https://twitter.com/wireus2020?lang=en"
+              }
+            ]
+          },
+          {
+            id: "carolinaHacks",
+            imgSrc: "https://cloud-8bqyah0fq-hack-club-bot.vercel.app/0carolinahacks.png",
+            title: "Carolina Hacks",
+            description: "The first student-led hackathon in South Carolina. I organized this event with my friend Dieter.",
+            links: [
+              {
+                title: "Website",
+                url: "https://www.carolinahacks.com/"
+              },
+              {
+                title: "Carolina Hacks Documentary",
+                url: "https://drive.google.com/file/d/1gOpYcsQk7mf2ETHbtHarUdKUDJAMFL-w/view?usp=sharing"
+              }
+            ]
+          },
+          {
+            id: "clubsDirectory",
+            imgSrc: "https://cloud-16a0ql3nr-hack-club-bot.vercel.app/0screenshot_2023-06-09_at_1.12.46_pm.png",
+            title: "Clubs Directory",
+            description: "This is a directory of clubs that I created. It's a handy tool for finding clubs and seeing what they're all about.",
+            links: [
+              {
+                title: "Directory Site",
+                url: "https://directory.hackclub.com/"
+              }
+            ]
+          }
+        ];
+
+
+
+        const iconContainer = document.getElementById('icon-container');
+
+        icons.forEach(icon => {
+          const divWrapper = document.createElement('div');
+          const divHeading = document.createElement('div');
+
+          const divIcon = document.createElement('div');
+          const img = document.createElement('img');
+          const p = document.createElement('p');
+          const description = document.createElement('p');
+          const linksContainer = document.createElement('div'); // Container for links/buttons
+
+          divHeading.style.cssText = "display: flex; flex-direction: row; align-items: center; gap: 8px;";
+
+          divWrapper.style.cssText = "align-items: center; background-color: #F6F6F6; border-radius: 16px; margin-bottom: 16px; padding: 16px; display: flex; flex-direction: column;";
+          img.style.cssText = "height: 48px; width: 48px; border-radius: 16px; margin: 0px;";
+          p.style.cssText = "margin: 0px; padding: 0px; font-size: 16px; margin-top: 4px; font-weight: 500; color: #000;";
+          description.style.cssText = "margin-top: 8px; margin-bottom: 0px;";
+          linksContainer.style.cssText = "display: flex; gap: 8px; align-items: left; justify-content: start; width: 100%; margin-top: 8px;";
+
+          divIcon.id = icon.id;
+          img.src = icon.imgSrc;
+          p.textContent = icon.title;
+          description.textContent = icon.description;
+
+          divHeading.appendChild(img);
+          divHeading.appendChild(p);
+          divIcon.appendChild(divHeading);
+
+          divIcon.appendChild(description);
+
+          divWrapper.appendChild(divIcon);
+          divWrapper.appendChild(linksContainer); // Append links container to the wrapper
+
+          icon.links.forEach(link => {
+            const linkButton = document.createElement('a');
+            linkButton.href = link.url;
+            linkButton.textContent = link.title;
+            linkButton.style.cssText = "display: inline-block; padding: 6px 12px; background-color: #4E75FF; color: #fff; border-radius: 16px; text-decoration: none;";
+
+            linksContainer.appendChild(linkButton); // Append link button to the links container
+          });
+
+          iconContainer.appendChild(divWrapper);
+        });
+
+
+      </script>
+
+    </div>
+  </div>
+
+
+  <div id="aboutMe" onclick="tapWindow(document.getElementById('aboutMe'))"
+    style="align-items: center; border: 1px solid black; border-radius: 16px; background-color: #fff; width: 500px; position: absolute; justify-content: center; flex-direction: column; display: none">
+    <div id="aboutMehandle"
+      style="display: flex; align-items: center; background-color: #F6F6F6; border-radius: 16px 16px 0px 0px; justify-content: space-between; width: 100%">
+      <div onclick="closeElement(document.getElementById('aboutMe'))"
+        style="cursor: pointer; height: 16px; width: 16px; background-color: red; border-radius: 16px; margin-left: 16px">
+      </div>
+      <p>aboutMe.txt</p>
+      <div style="height: 16px; width: 16px; border-radius: 16px; margin-right: 16px"></div>
+    </div>
+    <div style="font-family: Courier; width: calc(100% - 32px);">
+
+
+      <p style="outline: none;" contenteditable="true">Hello world, 👋
+        </br>
+        </br>
+
+        <img src="images\photo1.jpg"
+          style="width: 120px; border-radius: 16px" />
+        </br>
+        </br>
+        <h1><i>Vishant Rathi</i></h1>
+        <p>
+              I am an organized and creative undergraduate 
+              with excellent communication, problem-solving, 
+              and leadership skills. I am passionate about 
+              exploring opportunities in Computer Science 
+              Engineering while efficiently developing projects 
+    </div>
+    </div>
+  </div>
+  <div id="welcome" onclick="tapWindow(document.getElementById('welcome'))"
+    style="justify-content: center; align-items: center; display: flex; flex-direction: column; border: 1px solid black; padding: 16px; border-radius: 16px; background-color: #fff; position: absolute; z-index: 1;">
+    <div style="justify-content: start; display: flex; align-items: left; width: 100%">
+
+    </div>
+    <img style="height: 96px; width: 96px; border-radius: 64px; object-fit: cover;"
+      src="https://media.tenor.com/K3uxrqffdCAAAAAC/capybara-orange.gif" />
+    <div style="margin: 8;  text-align: center;">
+      <h1>Vishant's OS</h1>
+      <p style="text-align: center; margin: 0">
+        A unique operating system designed to showcase 
+        <br>
+        <b><i>Vishant Rathi's portfolio,</i></b><br>blending innovation and creativity seamlessly.
+      </p>
+      <div style="width: 100%; justify-content: center; display: flex; align-items: center;">
+        <p onclick="closeElement(document.getElementById('welcome'))"
+          style="text-align: center; width: fit-content; padding: 8px 16px; border-radius: 24px; color: blue; cursor: pointer; border: 1px solid transparent; transition: border-color 0.3s ease; margin-bottom: 0px;"
+          onmouseover="this.style.borderColor = 'blue';" onmouseout="this.style.borderColor = 'transparent';">
+          Banish
+        </p>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
